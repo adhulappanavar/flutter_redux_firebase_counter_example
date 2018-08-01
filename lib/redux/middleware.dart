@@ -30,6 +30,6 @@ Stream<dynamic> counterEpic(Stream<dynamic> actions, EpicStore<AppState> store) 
 }
 
 Observable<int> getUserClicks() {
-  return new Observable(Firestore.instance.collection('anil').document('JsXGSxI1T2Yk0yHl3bA8').snapshots) // 5
+  return new Observable(Firestore.instance.collection('anil').document('JsXGSxI1T2Yk0yHl3bA8').snapshots()) // 5
       .map((DocumentSnapshot doc) => doc['counter'] as int); // 6
 }
